@@ -1,6 +1,6 @@
 package com.zyc.lucene.config;
 
-import com.zyc.lucene.Indexdao.ProductLuceneDao;
+import com.zyc.lucene.dao.ProductLuceneDao;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

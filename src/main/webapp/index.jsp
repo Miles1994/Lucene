@@ -27,9 +27,10 @@
                         {field: "id", title: "编号", width: 100},
                         {field: "name", title: "名称", width: 100},
                         {field: "address", title: "地址", width: 100},
+                        {field: "description", title: "详情", width: 100},
                         {
                             field: "url", title: "图片", width: 100, formatter: function (view, row, index) {
-                                return "<img src='${pageContext.request.contextPath}/image/" + row.url + "' width='100'/>"
+                                return "<img src='${pageContext.request.contextPath}/image/"  + row.url + "' width='100'/>"
                             }
                         }
                     ]]

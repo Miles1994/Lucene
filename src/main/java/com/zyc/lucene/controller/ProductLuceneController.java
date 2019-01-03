@@ -34,12 +34,10 @@ public class ProductLuceneController {
         try {
             String id = UUID.randomUUID().toString();
             product.setId(id);
-            System.out.println(file.getOriginalFilename());
             String fileName = file.getOriginalFilename();
             String filePath = "E:\\MyIdeaProject\\lucene\\src\\main\\webapp\\image";
             String url = filePath + "/" + fileName;
             product.setUrl(fileName);
-            System.out.println(product);
             ps.addIndex(product);
             File dest = new File(url);
             file.transferTo(dest);
@@ -57,7 +55,6 @@ public class ProductLuceneController {
     @ResponseBody
     public List<Product> search(String keyWord) {
         List<Product> products = ps.queryIndex(keyWord);
-        System.out.println(products);
         return products;
     }
 }

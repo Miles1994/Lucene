@@ -1,6 +1,6 @@
 package com.zyc.lucene.service;
 
-import com.zyc.lucene.Indexdao.ProductLuceneDao;
+import com.zyc.lucene.dao.ProductLuceneDao;
 import com.zyc.lucene.entity.Product;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -34,8 +34,6 @@ public class ProductLuceneServiceImpl implements ProductLuceneService {
     public List<Product> queryIndex(String keyWord) {
         List<Product> products = productLuceneDao.searchIndex(keyWord);
         for (Product product : products) {
-            System.out.println("这是service");
-            System.out.println(product);
         }
         return products;
     }

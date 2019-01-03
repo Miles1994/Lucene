@@ -1,13 +1,13 @@
 package com.zyc.lucene.util;
 
 import com.zyc.lucene.entity.Product;
-import org.apache.log4j.Logger;
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.index.DirectoryReader;
 import org.apache.lucene.index.IndexWriter;
 import org.apache.lucene.index.IndexWriterConfig;
 import org.apache.lucene.search.IndexSearcher;
+import org.apache.lucene.search.highlight.Highlighter;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.FSDirectory;
 import org.apache.lucene.util.Version;
@@ -87,7 +87,6 @@ public class LuceneUtil {
         Date date = new Date(document.get("date"));
         product.setDate(date);
         product.setAddress(document.get("address"));
-
         return product;
     }
 }
